@@ -2,7 +2,10 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Home
+  - name: Docs Home
+    url: "https://madlabatuci.github.io/docs/"
+    weight: 5
+  - name: MPLib.js
     url: /
     weight: 10
   - name: Documentation
@@ -20,15 +23,19 @@ main:
 
 sidebar:
   - identifier: more
-    name: Still need help?
+    name: Navigate MADLAB
     params:
       type: separator
     weight: 1
-  - identifier: community
-    name: "Community"
-    pageRef: "/community"
+  - identifier: msteyvers
+    name: "🧑‍🏫 Dr. Mark Steyvers"
+    url: "https://steyvers.socsci.uci.edu/"
     weight: 2
-  - identifier: hugoDocs
-    name: "Hugo Docs ↗"
-    url: "https://docs.hugoblox.com"
+  - identifier: webpage
+    name: "🌐 MADLAB Webpage"
+    url: "https://steyvers.socsci.uci.edu/madlab/"
     weight: 3
+  - identifier: maindocs
+    name: "📖 Documentation Home"
+    url: ""
+    weight: 4

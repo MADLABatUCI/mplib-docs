@@ -1,6 +1,6 @@
 ---
-title: Showcase
-description: "Docs websites powered by Hugo Blox."
+title: Examples
+description: "Examples games using MPLib.js"
 type: landing
 
 
@@ -26,7 +26,7 @@ sections:
     content:
       filters:
         folders:
-          - showcase
+          - examples
     design:
       view: card
       spacing:

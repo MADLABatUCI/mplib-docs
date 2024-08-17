@@ -1,6 +1,6 @@
 ---
 title: Guide
-weight: 2
+weight: 5
 sidebar:
   open: true
 ---

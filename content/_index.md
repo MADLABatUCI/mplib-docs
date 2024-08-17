@@ -10,20 +10,20 @@ design:
 sections:
   - block: hero
     content:
-      title: Write Docs Fast, Focus on Your Content
-      text: The easy, no-code technical documentation solution your users will love 🎉
+      title: MPLib.js Documentation
+      text: A MultiPlayer Gaming Library for Researchers! 🎮
       primary_action:
         text: Get Started
-        url: https://hugoblox.com/templates/details/docs/
+        url: /tutorial/
         icon: rocket-launch
       secondary_action:
         text: Read the docs
-        url: /docs/
+        url: /mplib-docs/docs/
       announcement:
-        text: "Announcing the release of version 2."
+        text: "Learn how to create your own research game."
         link:
-          text: "Read more"
-          url: "/blog/"
+          text: "Tutorial"
+          url: "/tutorial/"
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -40,21 +40,19 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "1M+"
+        - statistic: "5+"
           description: |
-            Websites built  
-            with Hugo Blox
-        - statistic: "10k+"
+            Game Examples
+        - statistic: "Serverless"
           description: |
-            GitHub stars  
-            since 2016
+            Run experiments without a server
         - statistic: "3k+"
           description: |
             Discord community  
             for support
     design:
       # Section background color (CSS class)
-      css_class: "bg-gray-100 dark:bg-gray-800"
+      css_class: "bg-gray-400 dark:bg-gray-800"
       # Reduce spacing
       spacing:
         padding: ["1rem", 0, "1rem", 0]

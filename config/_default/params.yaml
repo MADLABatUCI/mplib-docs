@@ -43,8 +43,8 @@ header:
       filename: "logo.png"
     button:
       enable: true
-      text: "Get Started"
-      url: "https://hugoblox.com/templates/details/docs/"
+      text: "MADLAB Website"
+      url: "https://steyvers.socsci.uci.edu/madlab/"
     show_search: true
     show_theme_chooser: true
 

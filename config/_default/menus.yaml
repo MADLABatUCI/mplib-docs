@@ -2,20 +2,26 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Docs Home
-    url: "https://madlabatuci.github.io/docs/"
-    weight: 5
+  #- name: MADLAB Docs
+  #  url: "https://madlabatuci.github.io/docs/"
+  #  weight: 5
   - name: MPLib.js
     url: /
     weight: 10
+  - name: About
+    url: about/
+    weight: 15
   - name: Documentation
     url: docs/
     weight: 20
-  - name: Blog
-    url: blog/
+  - name: Tutorial
+    url: tutorial/
+    weight: 25
+  - name: Examples
+    url: examples/
     weight: 30
-  - name: Showcase
-    url: showcase/
+  - name: News
+    url: news/
     weight: 40
   - name: Community
     url: community/

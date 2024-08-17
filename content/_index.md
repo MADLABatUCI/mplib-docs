@@ -14,7 +14,7 @@ sections:
       text: A MultiPlayer Gaming Library for Researchers! 🎮
       primary_action:
         text: Get Started
-        url: /tutorial/
+        url: /mplib-docs/tutorial/
         icon: rocket-launch
       secondary_action:
         text: Read the docs
@@ -23,7 +23,7 @@ sections:
         text: "Learn how to create your own research game."
         link:
           text: "Tutorial"
-          url: "/tutorial/"
+          url: "/mplib-docs/tutorial/"
     design:
       spacing:
         padding: [0, 0, 0, 0]

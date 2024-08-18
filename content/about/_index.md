@@ -26,6 +26,6 @@ your programming needs.
 #### Learn how to use MPLib.js:
 
 {{< cards >}}
-  {{< card url="/docs/" title="Documentation" icon="devicon/gitbook" >}}
-  {{< card url="/walkthrough/" title="Tutorial - Build a Game" icon="devicon/javascript" >}}
+  {{< card url="/mplib-docs/docs/" title="Documentation" icon="devicon/gitbook" >}}
+  {{< card url="/mplib-docs/tutorial/" title="Tutorial - Build a Game" icon="devicon/javascript" >}}
 {{< /cards >}}

@@ -2,6 +2,7 @@
 title: Sessions
 weight: 1
 ---
+<!-- Page Specific Styling -->
 <style>
   a {
     text-decoration: none !important;
@@ -11,87 +12,137 @@ weight: 1
     color: white;
   }
 </style>
-Add information about session metadata here.
+
+<!-- Page Content -->
+Session data is stored under the `sessions` key in firebase. Each session will have a unique key
+value associated to it (in the example, the session key is `-O4bhX9wmx0cFlNK6ZZQ`). The data
+collected for each session has information about two major components of experiments:
+- [Metadata](#metadata)
+- [Players](#players)
+
+## Example
+
+Session data recorded to Firebase will look as follows:
 
 ```yaml
 🞃 sessions: {
       # Unique session ID
-    🞃 -O4Tzf-PJ5F8r1iVUmBk: {
-        🞂 allPlayersEver: {},
+    🞃 -O4bhX9wmx0cFlNK6ZZQ: {
+        🞃 allPlayersEver: {
+              🞃 _5iftyunyo: {
+                    arrivalIndex: 1,
+                    finishStatus: "na",
+                    leftGameAt: 0,
+                    numBlurred: 0,
+                    sessionStartedAt: 1724021887840,
+                    status: "focus",
+                    timeElapsedToWaitingRoom: 1939,
+                    waitingRoomStartedAt: 1724021875444
+              },
+              🞂 _7xsy2b05n: {}
+          },
           numPlayersEverJoined: 2,
-          playerControl: "_8kzvxj11l",
-        🞂 players: {},
+          playerControl: "_5iftyunyo",
+        🞃 players: {
+              🞂 _5iftyunyo: {},
+              🞃 _7xsy2b05n: {
+                    arrivalIndex: 2,
+                    finishStatus: "na",
+                    leftGameAt: 0,
+                    numBlurred: 1,
+                    sessionStartedAt: 1724021887840,
+                    status: "blur",
+                    timeElapsedToWaitingRoom: 8881,
+                    waitingRoomStartedAt: 1724021887840
+              },
+          },
           sessionIndex: 1,
-          sessionStartedAt: 1723875637932,
+          sessionStartedAt: 1724021887840,
           status: "active",
-          timeElapsedToWaitingRoom: 2750,
-          waitingRoomStartedAt: 1723875635286
+          timeElapsedToWaitingRoom: 1939,
+          waitingRoomStartedAt: 1724021875444
     }
 }
 ```
-[==functionName==](/mplib-docs/)
-: something
 
-{{< spoiler text="Click to view the spoiler" >}}
+<!-- Metadata information collected for each session -->
+## Metadata
 
-This is the content of the details.
+**allPlayersEver**
+: Player information for all players that have joined the session
 
-Markdown is **supported**.
-```python
-def function(param1):
-  print("hello")
-```
+**numPlayersEverJoined**
+: Total number of players that have joined the session
 
-<p>Testing something <b>here</b></p>
+**playerControl**
+: TODO
 
-{{< /spoiler >}}
+**players**
+: Player information about all of the current (active) players in the session
 
-The configuration of your site can be found in `config/_default/`.
+**sessionIndex**
+: Session index value (relevant for when there are multiple simultanious sessions)
 
-<!--more-->
+**sessionStartedAt**
+: Timestamp for when the session was started
 
-## Full Documentation
+**status**
+: The current status of the session (active, ...)
 
-See https://docs.hugoblox.com/getting-started/customize/
+**timeElapsedToWaitingRoom**
+: Total amount of time there was a waiting room for the session
 
-## Navigation
+**waitingRoomStartedAt**
+: Timestamp for when the waiting room was initiated
 
-### Menu
 
-See https://docs.hugoblox.com/getting-started/customize/#menu-items
+<!-- Information about player data -->
+## Players
 
-## Left Sidebar
+Player information can be found under the `allPlayersEver` key or the `players` key (for active
+players). Each player is assigned a unique key value (in the example below, there are two players
+with the values `_5iftyunyo` and `_7xsy2b05n`). All players have the following data collected:
 
-Links are automatically generated from the structure of your content directory. Simply add a folder to nest a page.
+**arrivalIndex**
+: Player index value (saved according to the order each player was added to firebase)
 
-### Extra Links
+**finishStatus**
+: TODO
 
-Additional links can be added under the `sidebar` section of your `config/_default/menus.yaml`:
+**leftGameAt**
+: Timestamp associated with the time a player left the session
 
-```yaml
-menu:
-  sidebar:
-    - name: "Need help?"
-      params:
-        type: separator
-      weight: 1
-    - name: "A page"
-      pageRef: "/page-filename-here"
-      weight: 2
-    - name: "An external link ↗"
-      url: "https://hugoblox.com"
-      weight: 3
-```
+**numBlurred**
+: TODO
 
-## Right Sidebar
+**sessionStartedAt**
+: Timestamp for when the session was started
 
-A table of contents is automatically generated from the headings your Markdown file.
+**status**
+: TODO
 
-It can optionally be disabled by setting `toc: false` in the front matter of a page:
+**timeElapsedToWaitingRoom**
+: Total amount of time there was a waiting room for the session
 
-```yaml
----
-title: My Page
-toc: false
----
-```
+**waitingRoomStartedAt**
+: Timestamp for when the waiting room was initiated
+
+
+<!-- Links to other sections -->
+## Other Sections
+
+{{< cards >}}
+  {{< card
+    url="../states/"
+    title="States"
+    icon="cube"
+    subtitle="Experiment specific data"
+    >}}
+
+  {{< card
+    url="../recorded-data/"
+    title="Recorded Data"
+    icon="server"
+    subtitle="Saved data for analysis"
+    >}}
+{{< /cards >}}

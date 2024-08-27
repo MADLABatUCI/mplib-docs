@@ -2,96 +2,83 @@
 title: States
 weight: 2
 ---
+<!-- Page Specific Styling -->
 <style>
   a {
     text-decoration: none !important;
   }
+
   a mark {
     font-size: 1.25em;
     color: white;
   }
+
+  .prose :where(blockquote p):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .prose :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before {
+    content: unset;
+  }
+
+  .prose :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after {
+    content: unset;
+  }
 </style>
-Add information about session metadata here.
+
+<!-- Page Content -->
+
+Write some stuff here about the data collected in `state`...
+
+## Example
+
+State data recorded to Firebase is experiment specific. It will look as follows:
 
 ```yaml
-🞃 sessions: {
+🞃 states: {
       # Unique session ID
-    🞃 -O4Tzf-PJ5F8r1iVUmBk: {
-        🞂 allPlayersEver: {},
-          numPlayersEverJoined: 2,
-          playerControl: "_8kzvxj11l",
-        🞂 players: {},
-          sessionIndex: 1,
-          sessionStartedAt: 1723875637932,
-          status: "active",
-          timeElapsedToWaitingRoom: 2750,
-          waitingRoomStartedAt: 1723875635286
-    }
+    🞃 -O4bhX9wmx0cFlNK6ZZQ: {
+        🞃 state: {
+            # Experiment specific data
+            🞂 board: {},
+              currentPlayer: "O",
+              firstArrival: "X",
+              playerStarted: "O",
+              round: 1,
+              winner: " "
+          },
+      }
 }
 ```
-[==functionName==](/mplib-docs/)
-: something
 
-{{< spoiler text="Click to view the spoiler" >}}
+## Data
 
-This is the content of the details.
+#### Unique Session ID
+> Key value matching a unique session ID found in `sessions`
 
-Markdown is **supported**.
-```python
-def function(param1):
-  print("hello")
-```
+#### state
+> Container for experiment specific data
 
-<p>Testing something <b>here</b></p>
+#### Experiment Specific Data
+> Data specific to an experiment which is defined by the experimenter in the javascript code
 
-{{< /spoiler >}}
 
-The configuration of your site can be found in `config/_default/`.
+<!-- Links to other sections -->
+## Other Sections
 
-<!--more-->
+{{< cards >}}
+  {{< card
+    url="../sessions/"
+    title="Sessions"
+    icon="bookmark"
+    subtitle="Metadata relevant to an experiment"
+    >}}
 
-## Full Documentation
-
-See https://docs.hugoblox.com/getting-started/customize/
-
-## Navigation
-
-### Menu
-
-See https://docs.hugoblox.com/getting-started/customize/#menu-items
-
-## Left Sidebar
-
-Links are automatically generated from the structure of your content directory. Simply add a folder to nest a page.
-
-### Extra Links
-
-Additional links can be added under the `sidebar` section of your `config/_default/menus.yaml`:
-
-```yaml
-menu:
-  sidebar:
-    - name: "Need help?"
-      params:
-        type: separator
-      weight: 1
-    - name: "A page"
-      pageRef: "/page-filename-here"
-      weight: 2
-    - name: "An external link ↗"
-      url: "https://hugoblox.com"
-      weight: 3
-```
-
-## Right Sidebar
-
-A table of contents is automatically generated from the headings your Markdown file.
-
-It can optionally be disabled by setting `toc: false` in the front matter of a page:
-
-```yaml
----
-title: My Page
-toc: false
----
-```
+  {{< card
+    url="../recorded-data/"
+    title="Recorded Data"
+    icon="server"
+    subtitle="Saved data for analysis"
+    >}}
+{{< /cards >}}

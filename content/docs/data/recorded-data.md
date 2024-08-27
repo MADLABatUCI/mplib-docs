@@ -6,92 +6,64 @@ weight: 3
   a {
     text-decoration: none !important;
   }
+
   a mark {
     font-size: 1.25em;
     color: white;
   }
+
+  .prose :where(blockquote p):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .prose :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before {
+    content: unset;
+  }
+
+  .prose :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after {
+    content: unset;
+  }
 </style>
-Add information about session metadata here.
+
+<!-- Page Content -->
+
+Write some stuff here about the data collected in `recordData`...
+
+## Example
+
+Recorded data takes a similar structure to the data recorded by `states`. However, there is
+additional metadata that is collected. It will look as follows:
 
 ```yaml
-🞃 sessions: {
-      # Unique session ID
+🞃 recordedData: {
+      # TODO
     🞃 -O4Tzf-PJ5F8r1iVUmBk: {
         🞂 allPlayersEver: {},
-          numPlayersEverJoined: 2,
-          playerControl: "_8kzvxj11l",
         🞂 players: {},
-          sessionIndex: 1,
-          sessionStartedAt: 1723875637932,
-          status: "active",
-          timeElapsedToWaitingRoom: 2750,
-          waitingRoomStartedAt: 1723875635286
     }
 }
 ```
-[==functionName==](/mplib-docs/)
-: something
 
-{{< spoiler text="Click to view the spoiler" >}}
+## Events
 
-This is the content of the details.
+## Players
 
-Markdown is **supported**.
-```python
-def function(param1):
-  print("hello")
-```
+<!-- Links to other sections -->
+## Other Sections
 
-<p>Testing something <b>here</b></p>
+{{< cards >}}
+  {{< card
+    url="../sessions/"
+    title="Sessions"
+    icon="bookmark"
+    subtitle="Metadata relevant to an experiment"
+    >}}
 
-{{< /spoiler >}}
-
-The configuration of your site can be found in `config/_default/`.
-
-<!--more-->
-
-## Full Documentation
-
-See https://docs.hugoblox.com/getting-started/customize/
-
-## Navigation
-
-### Menu
-
-See https://docs.hugoblox.com/getting-started/customize/#menu-items
-
-## Left Sidebar
-
-Links are automatically generated from the structure of your content directory. Simply add a folder to nest a page.
-
-### Extra Links
-
-Additional links can be added under the `sidebar` section of your `config/_default/menus.yaml`:
-
-```yaml
-menu:
-  sidebar:
-    - name: "Need help?"
-      params:
-        type: separator
-      weight: 1
-    - name: "A page"
-      pageRef: "/page-filename-here"
-      weight: 2
-    - name: "An external link ↗"
-      url: "https://hugoblox.com"
-      weight: 3
-```
-
-## Right Sidebar
-
-A table of contents is automatically generated from the headings your Markdown file.
-
-It can optionally be disabled by setting `toc: false` in the front matter of a page:
-
-```yaml
----
-title: My Page
-toc: false
----
-```
+  {{< card
+    url="../states/"
+    title="States"
+    icon="cube"
+    subtitle="Experiment specific data"
+    >}}
+{{< /cards >}}

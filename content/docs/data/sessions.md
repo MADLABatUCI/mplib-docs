@@ -7,9 +7,23 @@ weight: 1
   a {
     text-decoration: none !important;
   }
+
   a mark {
     font-size: 1.25em;
     color: white;
+  }
+  
+  .prose :where(blockquote p):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .prose :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before {
+    content: unset;
+  }
+
+  .prose :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after {
+    content: unset;
   }
 </style>
 
@@ -68,32 +82,33 @@ Session data recorded to Firebase will look as follows:
 <!-- Metadata information collected for each session -->
 ## Metadata
 
-**allPlayersEver**
-: Player information for all players that have joined the session
+#### allPlayersEver
+> Player information for all players that have joined the session
 
-**numPlayersEverJoined**
-: Total number of players that have joined the session
 
-**playerControl**
-: TODO
+#### numPlayersEverJoined
+> Total number of players that have joined the session
 
-**players**
-: Player information about all of the current (active) players in the session
+#### playerControl
+> TODO
 
-**sessionIndex**
-: Session index value (relevant for when there are multiple simultanious sessions)
+#### players
+> Player information about all of the current (active) players in the session
 
-**sessionStartedAt**
-: Timestamp for when the session was started
+#### sessionIndex
+> Session index value (relevant for when there are multiple simultanious sessions)
 
-**status**
-: The current status of the session (active, ...)
+#### sessionStartedAt
+> Timestamp for when the session was started
 
-**timeElapsedToWaitingRoom**
-: Total amount of time there was a waiting room for the session
+#### status
+> The current status of the session (active, ...)
 
-**waitingRoomStartedAt**
-: Timestamp for when the waiting room was initiated
+#### timeElapsedToWaitingRoom
+> Total amount of time there was a waiting room for the session
+
+#### waitingRoomStartedAt
+> Timestamp for when the waiting room was initiated
 
 
 <!-- Information about player data -->
@@ -103,29 +118,29 @@ Player information can be found under the `allPlayersEver` key or the `players` 
 players). Each player is assigned a unique key value (in the example below, there are two players
 with the values `_5iftyunyo` and `_7xsy2b05n`). All players have the following data collected:
 
-**arrivalIndex**
-: Player index value (saved according to the order each player was added to firebase)
+#### arrivalIndex
+> Player index value (saved according to the order each player was added to firebase)
 
-**finishStatus**
-: TODO
+#### finishStatus
+> TODO
 
-**leftGameAt**
-: Timestamp associated with the time a player left the session
+#### leftGameAt
+> Timestamp associated with the time a player left the session
 
-**numBlurred**
-: TODO
+#### numBlurred
+> TODO
 
-**sessionStartedAt**
-: Timestamp for when the session was started
+#### sessionStartedAt
+> Timestamp for when the session was started
 
-**status**
-: TODO
+#### status
+> TODO
 
-**timeElapsedToWaitingRoom**
-: Total amount of time there was a waiting room for the session
+#### timeElapsedToWaitingRoom
+> Total amount of time there was a waiting room for the session
 
-**waitingRoomStartedAt**
-: Timestamp for when the waiting room was initiated
+#### waitingRoomStartedAt
+> Timestamp for when the waiting room was initiated
 
 
 <!-- Links to other sections -->

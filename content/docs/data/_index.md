@@ -4,11 +4,47 @@ weight: 3
 sidebar:
   open: true
 ---
+<!-- Page Specific Styling -->
+<style>
+  a {
+    text-decoration: none !important;
+  }
+  a mark {
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
 
+<!-- Page Content -->
 This section contains information about how data is collected by MPLib.js and saved in Firebase.
-There are three main aspects to data collection (sessions, states, and recorded data). These
-three data collection components are described below. You can find more specific information about
-the respective components in their own sub-pages.
+There are three main aspects to data collection (
+  [sessions](#sessions),
+  [states](#states), and
+  [recorded data](#recorded-data)
+). These three data collection components are described below. You can find more specific
+information about the respective components in their own sub-pages.
+
+## Example
+
+Data recorded on Firebase will look as follows:
+
+```yaml
+  # Name you give your experiment
+🞃 experimentName: {
+      # Session specific data
+    🞃 sessions: {
+        🞂 -O4bhX9wmx0cFlNK6ZZQ: {}
+      },
+      # State specific data
+    🞃 states: {
+        🞂 -O4bhX9wmx0cFlNK6ZZQ: {}
+      },
+      # Recorded data
+    🞃 recordedData: {
+        🞂 -O4Tzf-PJ5F8r1iVUmBk: {}
+      }
+}
+```
 
 ## Sessions
 

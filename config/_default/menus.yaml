@@ -11,14 +11,14 @@ main:
   - name: About
     url: about/
     weight: 15
-  - name: Documentation
-    url: docs/
-    weight: 20
-  - name: Tutorial
-    url: tutorial/
-    weight: 25
   - name: Examples
     url: examples/
+    weight: 20
+  - name: Documentation
+    url: docs/
+    weight: 25
+  - name: Tutorial
+    url: tutorial/
     weight: 30
   - name: News
     url: news/

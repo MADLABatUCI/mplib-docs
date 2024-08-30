@@ -11,8 +11,8 @@ main:
   - name: About
     url: about/
     weight: 15
-  - name: Examples
-    url: examples/
+  - name: Demos
+    url: demos/
     weight: 20
   - name: Documentation
     url: docs/

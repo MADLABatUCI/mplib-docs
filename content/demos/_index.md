@@ -26,7 +26,7 @@ sections:
     content:
       filters:
         folders:
-          - examples
+          - demos
     design:
       view: card
       spacing:

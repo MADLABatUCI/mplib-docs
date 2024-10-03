@@ -42,14 +42,13 @@ sections:
       items:
         - statistic: "5+"
           description: |
-            Game Examples
+            Game Demos
         - statistic: "Serverless"
           description: |
             Run experiments without a server
-        - statistic: "3k+"
+        - statistic: "10+"
           description: |
-            Discord community  
-            for support
+            Live experiments use this library
     design:
       # Section background color (CSS class)
       css_class: "bg-gray-400 dark:bg-gray-800"
@@ -82,11 +81,11 @@ sections:
           description: Build your pages with blocks - no coding required!
   - block: cta-card
     content:
-      title: "Start Writing with the #1 Effortless Documentation Platform"
-      text: Hugo Blox Docs Theme brings all your technical knowledge together in a single, centralized knowledge base. Easily search and edit it with the tools you use every day!
+      title: "Start Creating Your Own <u>Serverless</u> Multiplayer Experiment"
+      text: MPLib.js facilitates the process of creating multiplayer online experiments.<br />Easily create new experiments with minimal programming experience!
       button:
-        text: Get Started
-        url: https://hugoblox.com/templates/details/docs/
+        text: Walkthrough Tutorial
+        url: /mplib-docs/tutorial/
     design:
       card:
         # Card background color (CSS class)

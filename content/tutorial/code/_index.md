@@ -1,5 +1,6 @@
 ---
-title: Guide
+type: docs
+title: Code
 weight: 2
 sidebar:
   open: true

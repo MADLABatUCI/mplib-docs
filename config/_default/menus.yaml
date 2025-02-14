@@ -10,22 +10,27 @@ main:
     weight: 10
   - name: About
     url: about/
-    weight: 15
+    weight: 20
   - name: Demos
     url: demos/
-    weight: 20
+    weight: 30
   - name: Documentation
     url: docs/
-    weight: 25
-  - name: Tutorial
-    url: tutorial/
-    weight: 30
+    weight: 40
+  - name: Tutorials
+    url: tutorials/
+    weight: 50
+  - name: Quick Start
+    parent: Tutorials
+    url: tutorials/community/
+    weight: 10
+  - name: Full Walkthrough
+    parent: Tutorials
+    url: tutorials/full-walkthrough
+    weight: 20
   - name: News
     url: news/
-    weight: 40
-  - name: Community
-    url: community/
-    weight: 50
+    weight: 70
 
 sidebar:
   - identifier: more

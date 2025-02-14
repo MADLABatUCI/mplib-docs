@@ -1,7 +1,8 @@
 ---
 type: docs
-linkTitle: Documentation
-title: Walkthrough Tutorial
+linkTitle: Quick-Start
+title: Quick-Start Guide
+weight: 1
 ---
 
 👋 Welcome to the walkthrough tutorial for MPLib.js!
